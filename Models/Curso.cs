@@ -15,7 +15,11 @@ namespace MVCLaboratorio.Models
         [Required]
         public string Descripcion { get; set; }
 
-        [Display(Name="Nombre Empleado")]
+        [Display(Name="Id Empleado")]
         public int IdEmpleado { get; set; }
+
+        //Propiedad Adicional
+        [Display(Name = "Id Empleado")]        
+        public string NombreEmpleado { get; set; }
     }
 }
