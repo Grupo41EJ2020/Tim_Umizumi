@@ -76,7 +76,9 @@
     <Compile Include="Models\Curso_Tema.cs" />
     <Compile Include="Models\Curso_Tema_Video.cs" />
     <Compile Include="Models\Empleado.cs" />
+    <Compile Include="Models\ICurso.cs" />
     <Compile Include="Models\IEmpleado.cs" />
+    <Compile Include="Models\RepositorioCurso.cs" />
     <Compile Include="Models\RepositorioEmpleado.cs" />
     <Compile Include="Models\Tema.cs" />
     <Compile Include="Models\Video.cs" />
@@ -86,6 +88,7 @@
   <ItemGroup>
     <Content Include="Content\EstilosUmizumi.css" />
     <Content Include="Global.asax" />
+    <Content Include="Views\Curso\Details.aspx" />
     <Content Include="Views\Curso\Index.aspx" />
     <Content Include="Views\Empleado\Create.aspx" />
     <Content Include="Views\Empleado\Delete.aspx" />

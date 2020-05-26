@@ -22,7 +22,7 @@
                 <%: Html.LabelFor(p => Model[0].Descripcion) %>
             </th>
             <th>
-                <%: Html.LabelFor(p=> Model[0].NombreEmpleado) %>
+                <%: Html.LabelFor(p=> Model[0].IdEmpleado) %>
             </th>
         </tr>
 
@@ -30,9 +30,9 @@
     
         <tr>
             <td>
-                <%: Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) %> |
-                <%: Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })%> |
-                <%: Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })%>
+                <%: Html.ActionLink("Edit", "Edit", new { id= item.IdCurso }) %> |
+                <%: Html.ActionLink("Detalles", "Details", new { id = item.IdCurso })%> |
+                <%: Html.ActionLink("Delete", "Delete", new { id=item.IdCurso })%>
             </td>
             <td>
                 <%: item.IdCurso %>
@@ -42,7 +42,7 @@
             </td>
 
             <td>
-                <%: item.NombreEmpleado %>
+                <%: item.IdEmpleado %>
             </td>
         </tr>
     
