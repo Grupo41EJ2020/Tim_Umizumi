@@ -66,8 +66,13 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Content\Controllers\CursoController.cs" />
     <Compile Include="Content\Controllers\HomeController.cs" />
+=======
+    <Compile Include="Controllers\EmpleadoController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+>>>>>>> 90e5e3d2eabac571f2ae4144f842d3055f5abb3f
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -75,6 +80,8 @@
     <Compile Include="Models\Curso_Tema.cs" />
     <Compile Include="Models\Curso_Tema_Video.cs" />
     <Compile Include="Models\Empleado.cs" />
+    <Compile Include="Models\IEmpleado.cs" />
+    <Compile Include="Models\RepositorioEmpleado.cs" />
     <Compile Include="Models\Tema.cs" />
     <Compile Include="Models\Video.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,7 +91,15 @@
     <Content Include="Content\EstilosUmizumi.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+<<<<<<< HEAD
     <Content Include="Views\Curso\Index.aspx" />
+=======
+    <Content Include="Views\Empleado\Create.aspx" />
+    <Content Include="Views\Empleado\Delete.aspx" />
+    <Content Include="Views\Empleado\Details.aspx" />
+    <Content Include="Views\Empleado\Edit.aspx" />
+    <Content Include="Views\Empleado\Index.aspx" />
+>>>>>>> 90e5e3d2eabac571f2ae4144f842d3055f5abb3f
     <Content Include="Views\Home\Index.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

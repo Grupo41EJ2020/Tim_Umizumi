@@ -25,4 +25,44 @@
 .validation-summary-valid
 {
     display: none;
+<<<<<<< HEAD
 }
+=======
+}
+
+body 
+{
+    background-color:#2C2C2C;
+    font-family:Arial;
+    color:White;
+}
+
+#main-container 
+{
+    margin: 150px auto;
+    width: 90%;
+}
+
+table
+{
+    background-color:red;
+    text-align:left;
+    width:100%;
+    border-collapse:collapse;
+}
+
+th, td 
+{
+    border:solid 1px black;
+    padding:20px;
+}
+
+#encabezado-tabla 
+{
+    background-color: green;
+    border-bottom: solid 5px white;
+    color: white;
+}
+
+    
+>>>>>>> 90e5e3d2eabac571f2ae4144f842d3055f5abb3f
