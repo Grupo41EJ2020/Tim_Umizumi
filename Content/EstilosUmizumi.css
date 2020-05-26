@@ -1,0 +1,42 @@
+﻿
+    table, th, td
+    {
+        border: 1px solid white;
+    }
+    table
+    {
+        margin: auto;
+        width:70%;
+        height: 200px;
+        border-collapse: collapse;
+        font-family: Arial;
+        font-size: 14px;
+        background-color: White;
+        text-align: left;
+        border: solid 5px black;
+    }
+    th
+    {
+        background-color: #AB0000;
+        border-bottom: solid 10px black;
+        color: white;
+        text-transform: uppercase;
+    }
+    th, td 
+    {
+       
+        padding: 20px;
+        border: solid 1px black;
+    }
+    tr:hover {background-color: #C2C2C2;}
+
+body
+{
+    background-color: #322E2F;    
+}
+
+#main-container
+{
+    margin: 150px auto;
+    width: 90%;    
+}
