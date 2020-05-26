@@ -18,9 +18,6 @@
                 <th>
                     Nombre
                 </th>
-                <th>
-                    Direccion
-                </th>
             </tr>
 
         <% foreach (var item in Model) { %>
@@ -36,9 +33,6 @@
                 </td>
                 <td>
                     <%: item.Nombre %>
-                </td>
-                <td>
-                    <%: item.Direccion %>
                 </td>
             </tr>
     
