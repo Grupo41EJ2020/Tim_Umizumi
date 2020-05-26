@@ -24,6 +24,20 @@ namespace MVCLaboratorio.Controllers
             return View(reposCurso.obtenerCurso(id));
         }
 
+        public ActionResult Create()
+        {
+
+            ViewData["lista"] = reposCurso.listaEmpleado();
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Curso datos)
+        {
+            reposCurso.insertarCurso(datos);
+            return RedirectToAction("Index");
+        }
+
     }
 }
 

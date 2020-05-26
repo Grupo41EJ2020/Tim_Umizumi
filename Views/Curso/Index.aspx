@@ -9,7 +9,7 @@
 </head>
 <body>
     <p>
-        <%: Html.ActionLink("Create New", "Create") %>
+        <%: Html.ActionLink("Agregar", "Create") %>
     </p>
    
     <table>

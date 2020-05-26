@@ -88,6 +88,7 @@
   <ItemGroup>
     <Content Include="Content\EstilosUmizumi.css" />
     <Content Include="Global.asax" />
+    <Content Include="Views\Curso\Create.aspx" />
     <Content Include="Views\Curso\Details.aspx" />
     <Content Include="Views\Curso\Index.aspx" />
     <Content Include="Views\Empleado\Create.aspx" />

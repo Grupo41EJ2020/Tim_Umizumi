@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using System.Data;
 using System.Data.SqlClient;
 using MVCLaboratorio.Models;
@@ -56,7 +57,11 @@ namespace MVCLaboratorio.Models
 
         public void insertarCurso(Curso datosCurso)
         {
-            throw new NotImplementedException();
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(new SqlParameter("@Descripcion", datosCurso.Descripcion));
+            parametros.Add(new SqlParameter("@IdEmpleado", datosCurso.IdEmpleado));
+
+            BaseHelper.ejecutarSentencia("sp_Curso_Insertar", CommandType.StoredProcedure, parametros);
         }
 
         public void eliminarCurso(int idCurso)
@@ -67,6 +72,21 @@ namespace MVCLaboratorio.Models
         public void actualizarCurso(Curso datosCurso)
         {
             throw new NotImplementedException();
+        }
+
+        public List<SelectListItem> listaEmpleado() 
+        {
+            DataTable dtEmpleado = BaseHelper.ejecutarConsulta("sp_Curso_CargarEmpleados", CommandType.StoredProcedure);
+            List<SelectListItem> listaEmpleados = new List<SelectListItem>();
+
+            for (int i = 0; i < dtEmpleado.Rows.Count; i++)
+            {
+                listaEmpleados.Add(new SelectListItem { Text = dtEmpleado.Rows[i]["Nombre"].ToString(), Value = dtEmpleado.Rows[i]["IdEmpleado"].ToString() });
+            }
+
+            listaEmpleados.Insert(0, new SelectListItem { Text = "---SELECCIONE---", Value = "" });
+
+            return listaEmpleados;
         }
     }
 }
