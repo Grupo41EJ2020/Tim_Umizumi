@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Data;
 using System.Data.SqlClient;
-using MVCLaboratorio.Utilerias; 
+using MVCLaboratorio.Utilerias;
 using MVCLaboratorio.Models;
 
 namespace MVCLaboratorio.Controllers
@@ -20,7 +20,7 @@ namespace MVCLaboratorio.Controllers
             DataTable dtCurso = BaseHelper.ejecutarConsulta("sp_Curso_Consultar_Todo", CommandType.StoredProcedure);
             List<Curso> lstCurso = new List<Curso>();
 
-            foreach (DataRow item in dtCurso.Rows) 
+            foreach (DataRow item in dtCurso.Rows)
             {
                 Curso datosCurso = new Curso();
 
@@ -47,7 +47,7 @@ namespace MVCLaboratorio.Controllers
         public ActionResult Create()
         {
             return View();
-        } 
+        }
 
         //
         // POST: /Curso/Create
@@ -66,10 +66,10 @@ namespace MVCLaboratorio.Controllers
                 return View();
             }
         }
-        
+
         //
         // GET: /Curso/Edit/5
- 
+
         public ActionResult Edit(int id)
         {
             return View();
@@ -84,7 +84,7 @@ namespace MVCLaboratorio.Controllers
             try
             {
                 // TODO: Add update logic here
- 
+
                 return RedirectToAction("Index");
             }
             catch
@@ -95,7 +95,7 @@ namespace MVCLaboratorio.Controllers
 
         //
         // GET: /Curso/Delete/5
- 
+
         public ActionResult Delete(int id)
         {
             return View();
@@ -110,7 +110,7 @@ namespace MVCLaboratorio.Controllers
             try
             {
                 // TODO: Add delete logic here
- 
+
                 return RedirectToAction("Index");
             }
             catch
@@ -120,3 +120,4 @@ namespace MVCLaboratorio.Controllers
         }
     }
 }
+
