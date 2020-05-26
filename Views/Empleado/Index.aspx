@@ -45,10 +45,10 @@
         <% } %>
 
         </table>
-    </div>
     <p>
         <%: Html.ActionLink("Agregar un Empleado", "Create") %>
     </p>
+    </div>
 
 </body>
 </html>
