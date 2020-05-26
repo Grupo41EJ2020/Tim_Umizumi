@@ -4,9 +4,10 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>Details</title>
+    <title>Detalles del Empleado</title>
 </head>
 <body>
+    <div class="main-container">
     <fieldset>
         <legend>Detalles del Empleado</legend>
         
@@ -24,7 +25,7 @@
         <%: Html.ActionLink("Editar", "Edit", new { id=Model.IdEmpleado}) %> |
         <%: Html.ActionLink("Regresar a la Lista", "Index") %>
     </p>
-
+    </div>
 </body>
 </html>
 
