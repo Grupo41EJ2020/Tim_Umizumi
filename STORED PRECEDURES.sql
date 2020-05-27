@@ -91,6 +91,16 @@ END;
 GO
 
 
+CREATE PROCEDURE sp_Curso_Insertar
+@descripcion NVARCHAR(200),
+@idempleado INT
+AS
+BEGIN
+	INSERT INTO Curso(Descripcion,IdEmpleado)
+	VALUES(@descripcion,@idempleado);
+
+END;
+GO
 
 CREATE PROCEDURE sp_Curso_Eliminar
 @idcurso int
