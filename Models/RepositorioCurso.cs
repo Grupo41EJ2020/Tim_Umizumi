@@ -66,7 +66,10 @@ namespace MVCLaboratorio.Models
 
         public void eliminarCurso(int idCurso)
         {
-            throw new NotImplementedException();
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(new SqlParameter("@IdCurso", idCurso));
+
+            BaseHelper.ejecutarConsulta("sp_Curso_Eliminar", CommandType.StoredProcedure, parametros);
         }
 
         public void actualizarCurso(Curso datosCurso)

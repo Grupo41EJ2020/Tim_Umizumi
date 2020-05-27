@@ -8,13 +8,10 @@
     <link href="../../Content/EstilosUmizumi.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <p>
-        <%: Html.ActionLink("Agregar", "Create") %>
-    </p>
-   
+
     <table>
         <tr>
-        <th></th>
+        <th><%: Html.ActionLink("Agregar", "Create") %></th>
             <th>
                 <%: Html.LabelFor(p => Model[0].IdCurso) %>
             </th>

@@ -89,6 +89,7 @@
     <Content Include="Content\EstilosUmizumi.css" />
     <Content Include="Global.asax" />
     <Content Include="Views\Curso\Create.aspx" />
+    <Content Include="Views\Curso\Delete.aspx" />
     <Content Include="Views\Curso\Details.aspx" />
     <Content Include="Views\Curso\Edit.aspx" />
     <Content Include="Views\Curso\Index.aspx" />

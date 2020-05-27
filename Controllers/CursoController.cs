@@ -51,6 +51,18 @@ namespace MVCLaboratorio.Controllers
             reposCurso.actualizarCurso(datos);
             return RedirectToAction("Index");
         }
+
+        public ActionResult Delete(int id)
+        {           
+            return View(reposCurso.obtenerCurso(id));
+        }
+
+        [HttpPost]
+        public ActionResult Delete(int id, FormCollection frm)
+        {
+            reposCurso.eliminarCurso(id);
+            return RedirectToAction("Index");
+        }
     }
 }
 
