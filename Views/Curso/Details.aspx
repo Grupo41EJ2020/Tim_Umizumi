@@ -24,7 +24,7 @@
         
     </fieldset>
     <p>
-        <%: Html.ActionLink("Editar", "Edit", new { /* id=Model.PrimaryKey */ }) %> |
+        <%: Html.ActionLink("Editar", "Edit", new { id = Model.IdCurso }) %> |
         <%: Html.ActionLink("Regresar", "Index") %>
     </p>
 
