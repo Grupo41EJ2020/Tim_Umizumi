@@ -8,13 +8,10 @@
     <link href="../../Content/EstilosUmizumi.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <p>
-        <%: Html.ActionLink("Create New", "Create") %>
-    </p>
-   
+
     <table>
         <tr>
-        <th></th>
+        <th><%: Html.ActionLink("Agregar", "Create") %></th>
             <th>
                 <%: Html.LabelFor(p => Model[0].IdCurso) %>
             </th>
@@ -22,7 +19,7 @@
                 <%: Html.LabelFor(p => Model[0].Descripcion) %>
             </th>
             <th>
-                <%: Html.LabelFor(p=> Model[0].NombreEmpleado) %>
+                <%: Html.LabelFor(p=> Model[0].IdEmpleado) %>
             </th>
         </tr>
 
@@ -30,9 +27,9 @@
     
         <tr>
             <td>
-                <%: Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) %> |
-                <%: Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })%> |
-                <%: Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })%>
+                <%: Html.ActionLink("Editar", "Edit", new { id= item.IdCurso }) %> |
+                <%: Html.ActionLink("Detalles", "Details", new { id = item.IdCurso })%> |
+                <%: Html.ActionLink("Eliminar", "Delete", new { id=item.IdCurso })%>
             </td>
             <td>
                 <%: item.IdCurso %>
@@ -42,7 +39,7 @@
             </td>
 
             <td>
-                <%: item.NombreEmpleado %>
+                <%: item.IdEmpleado %>
             </td>
         </tr>
     

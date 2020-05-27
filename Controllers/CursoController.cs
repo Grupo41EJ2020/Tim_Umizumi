@@ -12,111 +12,56 @@ namespace MVCLaboratorio.Controllers
 {
     public class CursoController : Controller
     {
-        //
-        // GET: /Curso/
+        RepositorioCurso reposCurso = new RepositorioCurso();
 
         public ActionResult Index()
         {
-            DataTable dtCurso = BaseHelper.ejecutarConsulta("sp_Curso_Consultar_Todo", CommandType.StoredProcedure);
-            List<Curso> lstCurso = new List<Curso>();
-
-            foreach (DataRow item in dtCurso.Rows)
-            {
-                Curso datosCurso = new Curso();
-
-                datosCurso.IdCurso = int.Parse(item["IDCURSO"].ToString());
-                datosCurso.Descripcion = item["DESCRIPCION"].ToString();
-                datosCurso.NombreEmpleado = item["NOMBRE"].ToString();
-
-                lstCurso.Add(datosCurso);
-            }
-            return View(lstCurso);
+            return View(reposCurso.obtenerCursos());
         }
-
-        //
-        // GET: /Curso/Details/5
 
         public ActionResult Details(int id)
         {
-            return View();
+            return View(reposCurso.obtenerCurso(id));
         }
-
-        //
-        // GET: /Curso/Create
 
         public ActionResult Create()
         {
+
+            ViewData["lista"] = reposCurso.listaEmpleado();
             return View();
         }
 
-        //
-        // POST: /Curso/Create
-
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Curso datos)
         {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            reposCurso.insertarCurso(datos);
+            return RedirectToAction("Index");
         }
-
-        //
-        // GET: /Curso/Edit/5
 
         public ActionResult Edit(int id)
         {
-            return View();
+            ViewData["lista"] = reposCurso.listaEmpleado();
+            return View(reposCurso.obtenerCurso(id));
         }
-
-        //
-        // POST: /Curso/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(int id, Curso datos)
         {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            datos.IdCurso = id;
+            reposCurso.actualizarCurso(datos);
+            return RedirectToAction("Index");
         }
-
-        //
-        // GET: /Curso/Delete/5
 
         public ActionResult Delete(int id)
-        {
-            return View();
+        {           
+            return View(reposCurso.obtenerCurso(id));
         }
 
-        //
-        // POST: /Curso/Delete/5
-
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, FormCollection frm)
         {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            reposCurso.eliminarCurso(id);
+            return RedirectToAction("Index");
         }
     }
 }
