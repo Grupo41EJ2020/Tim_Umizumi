@@ -38,6 +38,19 @@ namespace MVCLaboratorio.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Edit(int id)
+        {
+            ViewData["lista"] = reposCurso.listaEmpleado();
+            return View(reposCurso.obtenerCurso(id));
+        }
+
+        [HttpPost]
+        public ActionResult Edit(int id, Curso datos)
+        {
+            datos.IdCurso = id;
+            reposCurso.actualizarCurso(datos);
+            return RedirectToAction("Index");
+        }
     }
 }
 

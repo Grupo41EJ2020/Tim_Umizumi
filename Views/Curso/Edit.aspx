@@ -5,15 +5,22 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>Create</title>
+    <title>Edit</title>
 </head>
 <body>
     <% using (Html.BeginForm()) {%>
         <%: Html.ValidationSummary(true) %>
-
+        
         <fieldset>
-            <legend>Fields</legend>
+            <legend>Datos del Curso</legend>
             
+            <div class="editor-label">
+                <%: Html.LabelFor(model => model.IdCurso) %>
+            </div>
+            <div class="editor-field">
+                <%: Html.TextBoxFor(model => model.IdCurso, new { @readonly = "readonly"})%>
+                <%: Html.ValidationMessageFor(model => model.IdCurso) %>
+            </div>
             
             <div class="editor-label">
                 <%: Html.LabelFor(model => model.Descripcion) %>
@@ -27,10 +34,9 @@
                 <%: Html.LabelFor(model => model.IdEmpleado) %>
             </div>
             <div class="editor-field">
-                <%: Html.DropDownList("idempleado", listaEmpleados) %>
+                <%: Html.DropDownList("idempleado", listaEmpleados)%>
                 <%: Html.ValidationMessageFor(model => model.IdEmpleado) %>
             </div>
-           
             
             <p>
                 <input type="submit" value="Guardar" />

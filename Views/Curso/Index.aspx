@@ -30,9 +30,9 @@
     
         <tr>
             <td>
-                <%: Html.ActionLink("Edit", "Edit", new { id= item.IdCurso }) %> |
+                <%: Html.ActionLink("Editar", "Edit", new { id= item.IdCurso }) %> |
                 <%: Html.ActionLink("Detalles", "Details", new { id = item.IdCurso })%> |
-                <%: Html.ActionLink("Delete", "Delete", new { id=item.IdCurso })%>
+                <%: Html.ActionLink("Eliminar", "Delete", new { id=item.IdCurso })%>
             </td>
             <td>
                 <%: item.IdCurso %>
