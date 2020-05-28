@@ -69,6 +69,7 @@
     <Compile Include="Controllers\CursoController.cs" />
     <Compile Include="Controllers\EmpleadoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\VideoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -78,8 +79,10 @@
     <Compile Include="Models\Empleado.cs" />
     <Compile Include="Models\ICurso.cs" />
     <Compile Include="Models\IEmpleado.cs" />
+    <Compile Include="Models\IVideo.cs" />
     <Compile Include="Models\RepositorioCurso.cs" />
     <Compile Include="Models\RepositorioEmpleado.cs" />
+    <Compile Include="Models\RepositorioVideo.cs" />
     <Compile Include="Models\Tema.cs" />
     <Compile Include="Models\Video.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,6 +102,11 @@
     <Content Include="Views\Empleado\Edit.aspx" />
     <Content Include="Views\Empleado\Index.aspx" />
     <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Video\Create.aspx" />
+    <Content Include="Views\Video\Delete.aspx" />
+    <Content Include="Views\Video\Details.aspx" />
+    <Content Include="Views\Video\Edit.aspx" />
+    <Content Include="Views\Video\Index.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
