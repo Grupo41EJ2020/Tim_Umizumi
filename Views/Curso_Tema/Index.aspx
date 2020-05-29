@@ -11,7 +11,7 @@
     <table>
         <tr id="encabezado-tabla">
             <th></th>
-            
+           
             <th>
                 IdCurso
             </th>
@@ -28,9 +28,7 @@
                 <%: Html.ActionLink("Detalles", "Details", new {  id=item.IdCT })%> |
                 <%: Html.ActionLink("Eliminar", "Delete", new {id=item.IdCT})%>
             </td>
-            <td>
-                <%: item.IdCT %>
-            </td>
+            
             <td>
                 <%: item.IdCurso %>
             </td>
