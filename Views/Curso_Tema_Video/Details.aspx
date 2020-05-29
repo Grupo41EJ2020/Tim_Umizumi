@@ -19,9 +19,6 @@
         <div class="display-label">IdVideo</div>
         <div class="display-field"><%: Model.IdVideo %></div>
 
-        <div class="display-label">NombreVideo</div>
-        <div class="display-field"><%: Model.NombreVideo %></div>
-
     </fieldset>
     <p>
         <%: Html.ActionLink("Editar", "Edit", new { id=Model.IdCTV }) %> |
