@@ -36,16 +36,15 @@
                 <%: Html.TextBoxFor(model => model.FechaPublicacion) %>
                 <%: Html.ValidationMessageFor(model => model.FechaPublicacion) %>
             </div>
-            
             <p>
-                <input type="submit" value="Create" />
+                <input type="submit" value="Crear" />
             </p>
         </fieldset>
 
     <% } %>
 
     <div>
-        <%: Html.ActionLink("Back to List", "Index") %>
+       <%: Html.ActionLink("Regresar", "Index") %>
     </div>
 
 </body>

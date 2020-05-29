@@ -21,8 +21,6 @@ namespace MVCLaboratorio.Models
 
                 datosVideo.IdVideo = int.Parse(item["IdVideo"].ToString());
                 datosVideo.Nombre = item["Nombre"].ToString();
-                datosVideo.Url = item["Url"].ToString();
-                datosVideo.FechaPublicacion = DateTime.Parse(dtVideo.Rows[0]["FechaPublicacion"].ToString());
                 lstVideo.Add(datosVideo);
             }
             return lstVideo;

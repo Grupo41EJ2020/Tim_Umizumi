@@ -204,3 +204,83 @@ alter table curso_tema
 add constraint fk_idCurso Foreign Key (IdCurso) References Curso (IdCurso)
 On Delete Cascade;
 
+
+--Parte Jonathan Yair Vazquez Buenrostro
+Create Procedure sp_Video_ConsultarTodo
+As
+Begin
+Select * From Video
+End;
+
+Create Procedure sp_Video_ConsultarPorId
+@IdVideo int
+As
+Begin
+Select * From Video Where IdVideo=@IdVideo
+End;
+
+Create Procedure sp_Video_Actualizar
+@IdVideo int,
+@Nombre nvarchar(200),
+@Url nvarchar(100),
+@FechaPublicacion datetime
+As
+Begin
+Update Video Set Nombre=@Nombre,Url=@Url,FechaPublicacion=@FechaPublicacion where IdVideo=@IdVideo
+End;
+
+Create Procedure sp_Video_Inserta
+@Nombre nvarchar(200),
+@Url nvarchar(100),
+@FechaPublicacion datetime
+As
+Begin
+Insert Into Video(Nombre,Url,FechaPublicacion) Values(@Nombre,@Url,@FechaPublicacion)
+End;
+GO
+
+Create Procedure sp_Video_Eliminar
+@IdVideo int
+As
+Begin
+Delete From Video where IdVideo=@IdVideo
+End;
+
+Create Procedure sp_Tema_ConsultarTodo
+As
+Begin
+Select * From Tema
+End;
+
+Create Procedure sp_Tema_ConsultarPorId
+@IdTema int
+As
+Begin
+Select * From Tema Where IdTema=@IdTema
+End;
+GO
+
+Create Procedure sp_Tema_Insertar
+@Nombre nvarchar(100)
+As
+Begin
+Insert Into Tema(Nombre) Values(@Nombre)
+End;
+GO
+
+Create Procedure sp_Tema_Actualizar
+@IdTema int,
+@Nombre nvarchar(100)
+As
+Begin
+Update Tema Set Nombre=@Nombre Where IdTema=@IdTema
+End;
+GO
+
+Create Procedure sp_Tema_Eliminar
+@IdTema int
+As
+Begin
+Delete From Tema Where IdTema=@IdTema
+End;
+GO
