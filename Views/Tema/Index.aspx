@@ -14,9 +14,6 @@
             <th>
                 IdTema
             </th>
-            <th>
-                Nombre
-            </th>
         </tr>
 
     <% foreach (var item in Model) { %>
@@ -30,9 +27,6 @@
             <td>
                 <%: item.IdTema %>
             </td>
-            <td>
-                <%: item.Nombre %>
-            </td>
         </tr>
     
     <% } %>
@@ -42,7 +36,7 @@
     <p>
         <%: Html.ActionLink("Crear Tema", "Create") %>
     </p>
-
+    <a href="/Home/Index">Regresar</a>
 </body>
 </html>
 

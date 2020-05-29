@@ -19,7 +19,7 @@
     </fieldset>
     <p>
         <%: Html.ActionLink("Edit", "Edit", new { id=Model.IdTema }) %> |
-        <%: Html.ActionLink("Back to List", "Index") %>
+        <%: Html.ActionLink("Regresar", "Index") %>
     </p>
 
 </body>

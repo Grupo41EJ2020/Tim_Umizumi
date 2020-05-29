@@ -14,14 +14,6 @@
             <legend>Fields</legend>
             
             <div class="editor-label">
-                <%: Html.LabelFor(model => model.IdTema) %>
-            </div>
-            <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.IdTema) %>
-                <%: Html.ValidationMessageFor(model => model.IdTema) %>
-            </div>
-            
-            <div class="editor-label">
                 <%: Html.LabelFor(model => model.Nombre) %>
             </div>
             <div class="editor-field">
@@ -30,14 +22,14 @@
             </div>
             
             <p>
-                <input type="submit" value="Save" />
+                <input type="submit" value="Guardar" />
             </p>
         </fieldset>
 
     <% } %>
 
     <div>
-        <%: Html.ActionLink("Back to List", "Index") %>
+        <%: Html.ActionLink("Regresar", "Index") %>
     </div>
 
 </body>

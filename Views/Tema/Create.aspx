@@ -22,14 +22,14 @@
             </div>
             
             <p>
-                <input type="submit" value="Create" />
+                <input type="submit" value="Crear Tema" />
             </p>
         </fieldset>
 
     <% } %>
 
     <div>
-        <%: Html.ActionLink("Back to List", "Index") %>
+        <%: Html.ActionLink("Regresar", "Index") %>
     </div>
 
 </body>

@@ -13,14 +13,7 @@
         <fieldset>
             <legend>Fields</legend>
             
-            <div class="editor-label">
-                <%: Html.LabelFor(model => model.IdVideo) %>
-            </div>
-            <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.IdVideo) %>
-                <%: Html.ValidationMessageFor(model => model.IdVideo) %>
-            </div>
-            
+          
             <div class="editor-label">
                 <%: Html.LabelFor(model => model.Nombre) %>
             </div>
@@ -46,14 +39,14 @@
             </div>
             
             <p>
-                <input type="submit" value="Save" />
+                <input type="submit" value="Guardar" />
             </p>
         </fieldset>
 
     <% } %>
 
     <div>
-        <%: Html.ActionLink("Back to List", "Index") %>
+        <%: Html.ActionLink("Regresar", "Index") %>
     </div>
 
 </body>
