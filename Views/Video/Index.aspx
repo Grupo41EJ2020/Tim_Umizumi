@@ -23,9 +23,9 @@
     
         <tr>
             <td>
-                <%: Html.ActionLink("Edit", "Edit", new {  id=item.IdVideo }) %> |
-                <%: Html.ActionLink("Details", "Details", new {  id=item.IdVideo  })%> |
-                <%: Html.ActionLink("Delete", "Delete", new {  id=item.IdVideo  })%>
+                <%: Html.ActionLink("Editar", "Edit", new {  id=item.IdVideo }) %> |
+                <%: Html.ActionLink("Detalles", "Details", new {  id=item.IdVideo  })%> |
+                <%: Html.ActionLink("Eliminar", "Delete", new {  id=item.IdVideo  })%>
             </td>
             <td>
                 <%: item.IdVideo %>
