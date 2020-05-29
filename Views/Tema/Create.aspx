@@ -22,7 +22,7 @@
             </div>
             
             <p>
-                <input type="submit" value="Crear Tema" />
+                <input type="submit" value="Crear" />
             </p>
         </fieldset>
 
