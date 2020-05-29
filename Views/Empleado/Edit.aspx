@@ -4,7 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>Edit</title>
+    <title>Editar Empleado</title>
+    <link href="../../Content/EstilosUmizumi.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <% using (Html.BeginForm()) {%>

@@ -4,10 +4,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
-    <title>Delete</title>
+    <title>Eliminar Empleado</title>
+    <link href="../../Content/EstilosUmizumi.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <h3>Are you sure you want to delete this?</h3>
+    <h3>Elimnar Empleado</h3>
     <fieldset>
         <legend>¿Seguro que desea eliminar a este empleado?</legend>
         

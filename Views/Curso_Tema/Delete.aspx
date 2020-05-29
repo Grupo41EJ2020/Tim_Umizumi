@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <title>Delete</title>
+    <link href="../../Content/EstilosUmizumi.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <h3>¿Desea Eliminar Algo?</h3>
