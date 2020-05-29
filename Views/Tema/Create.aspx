@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage<MVCLaboratorio.Models.Video>" %>
+﻿<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage<MVCLaboratorio.Models.Tema>" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -21,21 +21,6 @@
                 <%: Html.ValidationMessageFor(model => model.Nombre) %>
             </div>
             
-            <div class="editor-label">
-                <%: Html.LabelFor(model => model.Url) %>
-            </div>
-            <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.Url) %>
-                <%: Html.ValidationMessageFor(model => model.Url) %>
-            </div>
-            
-            <div class="editor-label">
-                <%: Html.LabelFor(model => model.FechaPublicacion) %>
-            </div>
-            <div class="editor-field">
-                <%: Html.TextBoxFor(model => model.FechaPublicacion) %>
-                <%: Html.ValidationMessageFor(model => model.FechaPublicacion) %>
-            </div>
             <p>
                 <input type="submit" value="Create" />
             </p>
@@ -44,7 +29,7 @@
     <% } %>
 
     <div>
-       <%: Html.ActionLink("Back to List", "Index") %>
+        <%: Html.ActionLink("Back to List", "Index") %>
     </div>
 
 </body>
