@@ -111,6 +111,64 @@ BEGIN
 END;
 GO
 
+--PARTE JAHIR ADRIAN GRANADOS FLORES
+
+CREATE PROCEDURE sp_Curso_Tema_Video_Consultar_Todo
+AS
+BEGIN 
+	SELECT * FROM curso_tema_video;
+END;
+GO
+
+CREATE PROCEDURE sp_Curso_Tema_Video_Consultar_PorID
+@IdCTV int
+AS
+BEGIN
+	SELECT CTV.IdCTV,CTV.IdCT,CTV.IdVideo,V.Nombre FROM Curso_Tema_Video AS CTV
+	INNER JOIN Video AS V
+	ON CTV.IdVideo = V.IdVideo
+	WHERE CTV.IdCTV = @IdCTV;
+END;
+GO
+
+
+CREATE PROCEDURE sp_Curso_Tema_Video_Actualizar
+@IdCTV int,
+@IdCT int,
+@IdVideo int
+AS 
+BEGIN
+	UPDATE curso_tema_video
+	SET IdCT = @IdCT, IdVideo = @IdVideo
+	WHERE IdCTV = @IdCTV;
+END;
+GO
+
+
+CREATE PROCEDURE sp_Curso_Tema_Video_Insertar
+@IdCT INT,
+@IdVideo INT
+AS
+BEGIN
+	INSERT INTO curso_tema_video(IdCT,IdVideo)
+	VALUES(@IdCT,@IdVideo);
+
+END;
+GO
+
+CREATE PROCEDURE sp_Curso_Tema_Video_Eliminar
+@idcurso int
+AS
+BEGIN
+	DELETE FROM curso_tema_video
+	WHERE IdCTV = @IdCTV;
+END;
+GO
+
+
+
+--FIN PARTE JAHIR GRANADOS
+
 alter table curso
 drop constraint fk_idEmp;
 
