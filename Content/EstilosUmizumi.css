@@ -39,3 +39,34 @@ body
     margin: 150px auto;
     width: 90%;    
 }
+
+fieldset
+{
+    margin:auto;
+    border: 5px solid black;
+    width:90%;
+    background-color: #ab0000;
+}
+
+.display-label, .editor-label
+{
+    color:black;
+    font-weight:bold;
+}
+
+legend 
+{
+    font-weight:bold;
+    color:White;
+}
+
+.display-field, .editor-field
+{
+    color:white;
+    font-weight: normal;
+}
+
+h3 
+{
+    color:white;
+}
