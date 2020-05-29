@@ -111,6 +111,41 @@ BEGIN
 END;
 GO
 
+alter table curso
+drop constraint fk_idEmp;
+
+alter table curso 
+add constraint fk_idEmp Foreign Key (IdEmpleado) References Empleado (IdEmpleado)
+On Delete Cascade On Update Cascade;
+
+alter table curso_tema
+drop constraint fk_idtema;
+
+alter table curso_tema
+add constraint fk_idtema Foreign Key (IdTema) References Tema (IdTema)
+On Delete Cascade;
+
+alter table curso_tema_video
+drop constraint fk_idCT;
+
+alter table curso_tema_video
+add constraint fk_idCT Foreign Key (IdCT) References curso_tema (IdCT)
+On Delete Cascade;
+
+alter table curso_tema_video
+drop constraint fk_idVideo;
+
+alter table curso_tema_video
+add constraint fk_idVideo Foreign Key (IdVideo) References video (IdVideo)
+On Delete Cascade;
+
+alter table curso_tema
+drop constraint fk_idCurso;
+
+alter table curso_tema
+add constraint fk_idCurso Foreign Key (IdCurso) References Curso (IdCurso)
+On Delete Cascade;
+
 --PARTE JAHIR ADRIAN GRANADOS FLORES
 
 CREATE PROCEDURE sp_Curso_Tema_Video_Consultar_Todo
@@ -169,40 +204,6 @@ GO
 
 --FIN PARTE JAHIR GRANADOS
 
-alter table curso
-drop constraint fk_idEmp;
-
-alter table curso 
-add constraint fk_idEmp Foreign Key (IdEmpleado) References Empleado (IdEmpleado)
-On Delete Cascade On Update Cascade;
-
-alter table curso_tema
-drop constraint fk_idtema;
-
-alter table curso_tema
-add constraint fk_idtema Foreign Key (IdTema) References Tema (IdTema)
-On Delete Cascade;
-
-alter table curso_tema_video
-drop constraint fk_idCT;
-
-alter table curso_tema_video
-add constraint fk_idCT Foreign Key (IdCT) References curso_tema (IdCT)
-On Delete Cascade;
-
-alter table curso_tema_video
-drop constraint fk_idVideo;
-
-alter table curso_tema_video
-add constraint fk_idVideo Foreign Key (IdVideo) References video (IdVideo)
-On Delete Cascade;
-
-alter table curso_tema
-drop constraint fk_idCurso;
-
-alter table curso_tema
-add constraint fk_idCurso Foreign Key (IdCurso) References Curso (IdCurso)
-On Delete Cascade;
 
 
 --Parte Jonathan Yair Vazquez Buenrostro
