@@ -284,3 +284,49 @@ Begin
 Delete From Tema Where IdTema=@IdTema
 End;
 GO
+
+-- PARTE José Álvaro Rodríguez Hernández
+
+CREATE PROCEDURE sp_Curso_Tema_Insertar
+	@IdCurso int,
+	@IdTema int
+AS
+BEGIN
+	INSERT INTO Curso_Tema(IdCurso,IdTema)
+	VALUES(@IdCurso,@IdTema)
+END;
+GO
+
+CREATE PROCEDURE sp_Curso_Tema_Consultar_Todo
+AS
+BEGIN
+	SELECT * FROM Curso_Tema
+END;
+
+CREATE PROCEDURE sp_Curso_Tema_Consultar_PorID              
+	@IdCT int
+AS
+BEGIN
+	SELECT * FROM Curso_Tema
+	WHERE IdCT = @IdCT
+END;
+GO
+
+CREATE PROCEDURE sp_Curso_Tema_Eliminar
+	@IdCT int
+AS
+BEGIN
+	DELETE FROM Curso_Tema
+	WHERE IdCT = @IdCT
+END;
+GO
+
+CREATE PROCEDURE sp_Curso_Tema_Actualizar
+	@IdCT int,
+	@IdCurso int,
+	@IdTema int
+AS
+BEGIN
+	UPDATE Curso_Tema SET IdCurso=@IdCurso,IdTema=@IdTema
+	WHERE IdCT = @IdCT
+END;
